@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Page</title>
+    <link rel="stylesheet" href="{% static 'project.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class='bx bx-menu'></i>
+        </div>
+        <nav class="navbar" id="nav">
+            <a href="{% url 'index' %}" style="--i:1;">Home</a>
+            <a href="{% url 'About' %}" style="--i:2;">About</a>
+            <a href="{% url 'Skills'%}" style="--i:3;">Skills</a>
+            <a href="" style="--i:4;" class="active">Projects</a>
+        </nav>
+    </header>
+
+    <section class="projects">
+        <h1>Projects</h1>
+        <div class="projects-container">
+            <div class="project">
+                <div class="image-container">
+                    <img src="https://imagetolink.com/ib/QXBJ9qQWNm.PNG" alt="Project 1">
+                    <div class="overlay">
+                        <a href="https://github.com/MidmanScientific/TTU-Cert" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <p>Takoradi Technical University Certificate Verification System</p>
+            </div>
+            <div class="project">
+                <div class="image-container">
+                    <img src="https://imagetolink.com/ib/JyfXi1fUup.PNG" alt="Project 2">
+                    <div class="overlay">
+                        <a href="https://marnuelclerk.pythonanywhere.com/" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <p>Word Counter System for Blogs</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const menuToggle = document.getElementById('menu-toggle');
+          const nav = document.getElementById('nav');
+        
+          menuToggle.addEventListener('click', function () {
+              nav.classList.toggle('show');
+          });
+        });
+    </script>        
+</body>
+</html>

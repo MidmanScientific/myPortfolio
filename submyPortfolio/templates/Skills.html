@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmanuel Makae Skills</title>
+    <link rel="stylesheet" href="{% static 'Skills.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class='bx bx-menu'></i>
+        </div>
+        <nav class="navbar" id="nav">
+            <a href="{% url 'index' %}" style="--i:1;">Home</a>
+            <a href="{% url 'About' %}" style="--i:2;">About</a>
+            <a href="{% url 'Skills' %}" style="--i:3;" class="active">Skills</a>
+            <a href="{% url 'projects' %}" style="--i:3;">Project</a>
+        </nav>
+    </header> 
+    <div class="main">
+    <h1> My Skills</h1>
+</div>
+    <section class="skills1">
+        <div class="skills-content1">
+                <h2>Programming Languages</h2>
+                <p>Proficient in Python, utilizing it primarily for backend development, complemented by a strong foundation in JavaScript, HTML, and CSS for comprehensive full-stack web development. Additionally, skilled in Structured Query Language (SQL) for efficient database management and querying, enabling seamless integration of data-driven solutions </p>
+    </section>
+    <section class="skills2">
+        <div class="skills-content2">
+                <h2>Frontend Development</h2>
+                <p>Highly skilled, detail-oriented, and forward-thinking web developer with a strong proficiency in designing and developing engaging, dynamic, and user-centric web applications using HTML, CSS, and JavaScript. With a keen eye for layout, styling, and scripting, I excel at creating high-quality web applications that not only exceed user expectations but also drive business results, foster brand loyalty, and propel organizations forward in the digital landscape.</p>
+        </div>
+    </section>
+    <section class="skills3">
+        <div class="skills-content3">
+                <h2>Backend Development</h2>
+                <p>As a seasoned Fullstack developer, I have honed my skills in crafting scalable, efficient, and secure server-side applications using the Django framework, which is built on the Python programming language. With Django, I have leveraged its high-level abstractions, robust ORM, and extensive libraries to rapidly develop and deploy complex web applications.</p>
+        </div>
+    </section>
+    <section class="skills4">
+        <div class="skills-content4">
+                <h2>Database Management</h2>
+                <p>In my Django projects, I have leveraged the built-in SQLite3 database for small-scale, personal projects and testing purposes. However, for large-scale, production-ready projects, My experience with the PostgreSQL capitalizes me on my proficiency in Structured Query Language (SQL). This experience has equipped me with the skills to design, implement, and optimize database architectures that meet the demands of complex applications..</p>
+        </div>
+    </section>
+    <section class="skills5">
+        <div class="skills-content5">
+                <h2>Version Control</h2>
+                <p>I utilize Git for version control and GitHub as my repository of choice. With Git, I'm able to track changes made to my codebase, collaborate with others, and maintain a record of all updates. GitHub provides a cloud-based platform for storing and managing my repositories, allowing me to access my code from anywhere and share it with others.</p>
+        </div>
+    </section>
+
+    <script src="{% static 'script.js' %}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const menuToggle = document.getElementById('menu-toggle');
+          const nav = document.getElementById('nav');
+        
+          menuToggle.addEventListener('click', function () {
+              nav.classList.toggle('show');
+          });
+        });
+    </script> 
+</body>
+</html>
